@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+var markon = require('../');
+
+program
+  .usage('[options] [path]')
+  .version(require('../package.json').version)
+  .option('-p, --port <port>', 'specify the port [3000]', Number, 3000)
+  .option('-e, --extension <extension>', 'filter watched files by extension', String, '')
+  .parse(process.argv);
+
+markon(program.args.shift(), {
+  port: program.port,
+  extension: program.extension
+});
