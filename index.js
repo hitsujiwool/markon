@@ -54,7 +54,7 @@ module.exports = function(file, opts) {
     }
     
     watcher = chokidar.watch(file, { ignoreInitial: true });
-    console.log('\033[90mstart watching \033[36m*.%s\033[90m in \033[36m%s\033[0m', extension || '*', file);
+    console.log('\033[90mstart watching \033[36m%s\033[0m', file);
 
     watcher
       .on('change', onUpdate)
