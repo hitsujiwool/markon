@@ -1657,7 +1657,8 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
 };
 
 },{}],8:[function(require,module,exports){
-(function (global){/*! http://mths.be/punycode v1.2.3 by @mathias */
+(function (global){
+/*! http://mths.be/punycode v1.2.4 by @mathias */
 ;(function(root) {
 
 	/** Detect free variables */
@@ -1887,7 +1888,6 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
 		    k,
 		    digit,
 		    t,
-		    length,
 		    /** Cached calculation results */
 		    baseMinusT;
 
@@ -2123,7 +2123,7 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
 		 * @memberOf punycode
 		 * @type String
 		 */
-		'version': '1.2.3',
+		'version': '1.2.4',
 		/**
 		 * An object of methods to convert from JavaScript's internal character
 		 * representation (UCS-2) to Unicode code points, and back.
@@ -2149,10 +2149,10 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
 		typeof define.amd == 'object' &&
 		define.amd
 	) {
-		define(function() {
+		define('punycode', function() {
 			return punycode;
 		});
-	}	else if (freeExports && !freeExports.nodeType) {
+	} else if (freeExports && !freeExports.nodeType) {
 		if (freeModule) { // in Node.js or RingoJS v0.8.0+
 			freeModule.exports = punycode;
 		} else { // in Narwhal or RingoJS v0.7.0-
@@ -2165,6 +2165,7 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
 	}
 
 }(this));
+
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],9:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
@@ -2594,7 +2595,8 @@ PassThrough.prototype._transform = function(chunk, encoding, cb) {
 };
 
 },{"./transform.js":17,"inherits":3}],16:[function(require,module,exports){
-(function (process){// Copyright Joyent, Inc. and other Node contributors.
+(function (process){
+// Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the
@@ -3527,6 +3529,7 @@ function indexOf (xs, x) {
   }
   return -1;
 }
+
 }).call(this,require("/Users/ryo/markon/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"))
 },{"./index.js":13,"/Users/ryo/markon/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":4,"buffer":5,"events":2,"inherits":3,"process/browser.js":14,"string_decoder":19}],17:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
@@ -7339,7 +7342,8 @@ if (typeof module === 'object' && module && module.exports) {
 
 
 },{}],23:[function(require,module,exports){
-(function (process){var Stream = require('stream')
+(function (process){
+var Stream = require('stream')
 
 // through
 //
@@ -7446,6 +7450,7 @@ function through (write, end, opts) {
   }
   return stream
 }
+
 
 }).call(this,require("/Users/ryo/markon/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js"))
 },{"/Users/ryo/markon/node_modules/browserify/node_modules/insert-module-globals/node_modules/process/browser.js":4,"stream":13}]},{},[1])
