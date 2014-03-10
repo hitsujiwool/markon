@@ -6,8 +6,17 @@ realtime markdown previewer
 
 ## Usage
 
-Both dirname and filename are  possible for [path].
-
+```
+$ markon ./Readme.md
+```
+or
+```
+$ markon ./ -e md  ### watch only markdown
+```
+and
+```
+$ open http://localhost:3000
+```
 ```
 Usage: markon [options] [path]
 
