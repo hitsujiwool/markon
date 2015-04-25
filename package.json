@@ -7,6 +7,13 @@
     "build": "browserify -o public/bundle.js -t browserify-css app.js",
     "prepublish": "npm run build"
   },
+  "files": [
+    "Readme.md",
+    "LICENSE",
+    "public",
+    "bin",
+    "lib"
+  ],
   "bin": {
     "markon": "./bin/markon"
   },
