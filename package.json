@@ -1,28 +1,40 @@
 {
   "name": "markon",
-  "version": "0.0.2",
-  "description": "realtime markdown previewer",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "tiny markdown previewer",
   "scripts": {
     "test": "mocha",
-    "browserify": "browserify client.js -o public/bundle.js"
+    "build": "browserify -o public/bundle.js -t browserify-css app.js",
+    "prepublish": "npm run build"
   },
   "bin": {
     "markon": "./bin/markon"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hitsujiwool/markon"
+  },
+  "keywords": [
+    "markdown"
+  ],
   "author": "Ryo Murayama <utatanenohibi@gmail.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hitsujiwool/markon/issues"
+  },
   "devDependencies": {
-    "mocha": "*",
-    "browserify": "~3.28.2"
+    "browserify": "^9.0.8",
+    "browserify-css": "^0.6.1",
+    "mocha": "^2.2.4"
   },
   "dependencies": {
-    "markdown-stream": "git://github.com/hitsujiwool/markdown-stream.git#0.0.1",
-    "through": "~2.3.4",
-    "highlight": "~0.2.3",
-    "shoe": "~0.0.15",
-    "ecstatic": "~0.4.13",
-    "commander": "~1.3.0",
-    "chokidar": "~0.8.1"
+    "chokidar": "^1.0.1",
+    "commander": "^2.8.0",
+    "ecstatic": "^0.7.4",
+    "github-markdown-css": "^2.0.8",
+    "highlight.js": "^8.5.0",
+    "marked": "^0.3.3",
+    "shoe": "0.0.15",
+    "through": "^2.3.7"
   }
 }
