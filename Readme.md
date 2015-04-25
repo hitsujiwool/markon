@@ -2,10 +2,6 @@
 
 markdown previewer built on top of WebSocket
 
-```javascript
-var hoge = fuga()
-```
-
 ## Usage
 
 ```
